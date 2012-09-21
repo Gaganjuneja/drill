@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Language" content="en" />
+
+    <title>Apache Drill - Introduction to Apache Drill</title>
+
+    <link rel="stylesheet" href="/drill/css/bootstrap-2.1.0.min.css" />
+    <link rel="stylesheet" href="/drill/css/drill.css" type="text/css">
+    <script type="text/javascript" src="/drill/js/bootstrap-2.1.0.min.js"></script>
+  </head>
+  <body>
+
+    <div class="navbar navbar-inverse navbar-static-top">
+      
+        <div class="container-fluid">
+
+          <a class="nav pull-right brand" href="http://incubator.apache.org">
+            <img src="http://incubator.apache.org/images/egg-logo.png" alt="apache Incubator Logo" />
+          </a>
+
+        </div>
+      
+    </div>
+
+    <ul class="breadcrumb">
+      <li>
+        <a href="/">Incubator</a>
+	<span class="divider">&raquo;</span>
+      </li>
+      <li>
+        <a href="/drill/">Drill</a>
+      </li>
+      
+    </ul>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+
+        <!-- SIDEBAR AREA -->
+        <div class="span2">
+          <div class="sidebar-nav">
+            <ul class="nav nav-list">
+              
+                
+                  <li class="nav-header">Apache Drill</li>
+                
+              
+                
+                  
+                    <li><a href="/drill/index.html">Overview</a></li>
+                  
+                
+              
+                
+                  <li class="nav-header">Wiki</li>
+                
+              
+                
+                  <li class="nav-header">Project</li>
+                
+              
+                
+                  
+                    <li><a href="/drill/source-repository.html">Source Code</a></li>
+                  
+                
+              
+                
+                  
+                    <li><a href="/drill/mailing-lists.html">Mailing Lists</a></li>
+                  
+                
+              
+                
+                  
+                    <li><a href="https://issues.apache.org/jira/browse/DRILL">Issue Tracking</a></li>
+                  
+                
+              
+                
+                  
+                    <li><a href="/drill/resources.html">Resources</a></li>
+                  
+                
+              
+                
+                  
+                    <li><a href="http://apache.org/licenses/LICENSE-2.0.html">License</a></li>
+                  
+                
+              
+            </ul>
+          </div> <!-- /well -->
+        </div> <!-- /span -->
+
+        <!-- CONTENT AREA -->
+        <div class="span10">
+          <h1 class="title">
+            Introduction to Apache Drill
+            
+          </h1>
+
+          <h2 id="introduction">Introduction</h2>
+<p>Apache Drill is an open-source software framework that supports data-intensive distributed applications for interactive analysis of large-scale datasets.
+Drill is the open source version of <a href="http://research.google.com/pubs/pub36632.html">Google's Dremel</a> system which is available as an IaaS service called Google BigQuery.
+One explicitly stated design goal is that Drill is able to scale to 10,000 servers or more and to be able to process petabyes of data and trillions of records in seconds. Currently, Drill is incubating at Apache.</p>
+<h2 id="high-level-concepts">High Level Concepts</h2>
+<p>There is a strong need in the market for low-latency interactive analysis of large-scale datasets, including nested data (eg, JSON, Avro, Protocol Buffers).
+This need was identified by Google and addressed internally with a system called Dremel.</p>
+<p>In recent years open source systems have emerged to address the need for scalable batch processing (Apache Hadoop) and stream processing (Storm, Apache S4). 
+Apache Hadoop, originally inspired by Google's internal MapReduce system, is used by thousands of organizations processing large-scale datasets. 
+Apache Hadoop is designed to achieve very high throughput, but is not designed to achieve the sub-second latency needed for interactive data analysis and exploration. 
+Drill, inspired by Google's internal Dremel system, is intended to address this need.</p>
+<p>It is worth noting that, as explained by Google in the original paper, Dremel complements MapReduce-based computing. Dremel is not intended as a replacement 
+for MapReduce and is often used in conjunction with it to analyze outputs of MapReduce pipelines or rapidly prototype larger computations. 
+Indeed, Dremel and MapReduce are both used by thousands of Google employees.</p>
+<p>Like Dremel, Drill supports a nested data model with data encoded in a number of formats such as JSON, Avro or Protocol Buffers. 
+In many organizations nested data is the standard, so supporting a nested data model eliminates the need to normalize the data. 
+With that said, flat data formats, such as CSV files, are naturally supported as a special case of nested data. </p>
+        </div> <!-- /span -->
+
+      </div> <!-- /row-fluid -->
+
+    </div>
+
+    <hr/>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row span12">Copyright &copy; 2012
+          <a href="http://www.apache.org/">The Apache Software Foundation</a>,
+          licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+	  <p><small>Apache Incubator, Apache, and the Apache feather logo 
+	  are trademarks of The Apache Software Foundation.
+	  Other names appearing on the site may be trademarks of their
+	  respective owners.</small></p>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
