@@ -1,0 +1,42 @@
+Title:    Introduction to Apache Drill
+Notice:   Licensed to the Apache Software Foundation (ASF) under one
+          or more contributor license agreements.  See the NOTICE file
+          distributed with this work for additional information
+          regarding copyright ownership.  The ASF licenses this file
+          to you under the Apache License, Version 2.0 (the
+          "License"); you may not use this file except in compliance
+          with the License.  You may obtain a copy of the License at
+          .
+            http://www.apache.org/licenses/LICENSE-2.0
+          .
+          Unless required by applicable law or agreed to in writing,
+          software distributed under the License is distributed on an
+          "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+          KIND, either express or implied.  See the License for the
+          specific language governing permissions and limitations
+          under the License.
+
+## Introduction
+
+Apache Drill is an open-source software framework that supports data-intensive distributed applications for interactive analysis of large-scale datasets.
+Drill is the open source version of [Google's Dremel](http://research.google.com/pubs/pub36632.html) system which is available as an IaaS service called Google BigQuery.
+One explicitly stated design goal is that Drill is able to scale to 10,000 servers or more and to be able to process petabyes of data and trillions of records in seconds. Currently, Drill is incubating at Apache.
+
+## High Level Concept
+
+There is a strong need in the market for low-latency interactive analysis of large-scale datasets, including nested data (eg, JSON, Avro, Protocol Buffers).
+This need was identified by Google and addressed internally with a system called Dremel.
+
+In recent years open source systems have emerged to address the need for scalable batch processing (Apache Hadoop) and stream processing (Storm, Apache S4). 
+Apache Hadoop, originally inspired by Google's internal MapReduce system, is used by thousands of organizations processing large-scale datasets. 
+Apache Hadoop is designed to achieve very high throughput, but is not designed to achieve the sub-second latency needed for interactive data analysis and exploration. 
+Drill, inspired by Google's internal Dremel system, is intended to address this need.
+
+It is worth noting that, as explained by Google in the original paper, Dremel complements MapReduce-based computing. Dremel is not intended as a replacement 
+for MapReduce and is often used in conjunction with it to analyze outputs of MapReduce pipelines or rapidly prototype larger computations. 
+Indeed, Dremel and MapReduce are both used by thousands of Google employees.
+
+Like Dremel, Drill supports a nested data model with data encoded in a number of formats such as JSON, Avro or Protocol Buffers. 
+In many organizations nested data is the standard, so supporting a nested data model eliminates the need to normalize the data. 
+With that said, flat data formats, such as CSV files, are naturally supported as a special case of nested data. 
+
